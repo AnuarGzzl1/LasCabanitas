@@ -50,7 +50,7 @@ header {
 }
 header .logo {
   margin: 0;
-  padding: 25px 30px;
+  padding: 15px 20px;
   font-weight: bold;
   color: blueviolet;
   font-size: 1.45em;
@@ -64,7 +64,7 @@ header nav {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 25px;
+  padding: 0px;
 }
 header a {
   padding: 5px 12px;
@@ -97,7 +97,7 @@ header a:hover {
 }
 #cabanitas .container {
   text-align: center;
-  padding: 200px 12px;
+  padding: 100px 12px;
 }
 #nuestrosplanes {
   background-color: rgb(30, 30, 30);
@@ -177,4 +177,81 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+@media (min-width: 720px){
+    header{
+      position: fixed;
+      width: 100%;
+    }
+
+    header .container{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    header nav{
+      flex-direction: row;
+      padding-bottom: 0;
+      padding-right: 20px;
+    }
+    #banner h1{
+      font-size: 5em;
+    }
+
+    #cabanitas .container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    #cabanitas .text{
+      width: 50%;
+      max-width: 600px;
+      text-align: initial;
+      padding-left: 30px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #cabanitas h2{
+      margin-top: 0px;
+    }
+
+    #cabanitas .image-container{
+        background-image: url("https://www.mexicodesconocido.com.mx/wp-content/uploads/2019/08/cabanas-jalisco-portada.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    #nuestrosplanes .planes{
+      display: flex;
+      justify-content: center;
+    }
+    #nuestrosplanes p{
+      display: block;
+      margin-top: 30px;
+    }
+    #nuestrosplanes h3{
+      margin-top: 0;
+    }
+    #nuestrosplanes .carta{
+      padding: 50px;
+    }
+    #caracteristicas{
+      background-image: url("https://images.homify.com/c_fill,f_auto,q_0,w_740/v1565550507/p/photo/image/3158622/DSC00781.jpg");
+      background-repeat: no-repeat;
+      background-size: 500px, 400px;
+      background-position: calc(100vw - 500px) 120px;
+    }
+    #caracteristicas .container{
+      text-align: initial;
+    }
+    #caracteristicas ul{
+      margin-left: 100px;
+    }
+}
+@media (min-width: 1100px) {
+  #caracteristicas{
+    background-position: calc(100vw - 800px);
+  }
 }
